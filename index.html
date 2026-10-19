@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BI Academy</title>
+    <meta
+      name="description"
+      content="Sitio educativo de Business Intelligence, toma de decisiones y ETL con un cuestionario gamificado."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="#inicio" class="navbar-brand" aria-label="BI Academy inicio">
+          <span class="brand-mark">BI</span>
+          BI Academy
+        </a>
+
+        <button class="navbar-toggle" aria-label="Abrir menú" type="button">☰</button>
+
+        <nav aria-label="Navegación principal">
+          <ul class="navbar-nav">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#fundamentos">Fundamentos de BI</a></li>
+            <li><a href="#etl">Proceso ETL</a></li>
+            <li><a href="#quiz">Cuestionario</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div>
+            <p class="section-badge">Business Intelligence • Datos • Decisiones</p>
+            <h1>Transforma los datos en decisiones inteligentes</h1>
+            <p>
+              Business Intelligence conecta la información, la analítica y la estrategia para
+              convertir datos crudos en decisiones más rápidas, precisas y sostenibles.
+            </p>
+            <div class="hero-actions">
+              <a href="#fundamentos" class="btn btn-primary">Comenzar a aprender</a>
+              <a href="#quiz" class="btn btn-outline">Realizar el cuestionario</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Panel visual de analítica empresarial">
+            <div class="data-panel">
+              <div class="panel-header">
+                <strong>Indicadores clave</strong>
+                <span class="live-badge">Live</span>
+              </div>
+
+              <div class="metric-row">
+                <div class="metric-box">
+                  <small>Ventas</small>
+                  <strong>+18.4%</strong>
+                </div>
+                <div class="metric-box">
+                  <small>Retención</small>
+                  <strong>92%</strong>
+                </div>
+                <div class="metric-box">
+                  <small>Costo</small>
+                  <strong>-7.2%</strong>
+                </div>
+                <div class="metric-box">
+                  <small>Prod.</small>
+                  <strong>84%</strong>
+                </div>
+              </div>
+
+              <div class="chip-row">
+                <span class="chip"><i class="bi bi-graph-up-arrow"></i> KPI</span>
+                <span class="chip"><i class="bi bi-database"></i> ETL</span>
+                <span class="chip"><i class="bi bi-bar-chart"></i> Dashboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="fundamentos">
+        <div class="container">
+          <div style="max-width: 700px;">
+            <h2 class="section-title">Fundamentos de Business Intelligence</h2>
+            <p class="section-subtitle">
+              BI reúne procesos, técnicas y herramientas para recopilar datos, convertirlos en
+              información y utilizarlos en la toma de decisiones estratégicas.
+            </p>
+          </div>
+
+          <div class="content-grid two-columns">
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-question-circle"></i></div>
+              <h3>¿Qué es Business Intelligence?</h3>
+              <p>
+                Es el conjunto de procesos y herramientas que permiten recopilar, transformar,
+                analizar y visualizar datos para apoyar decisiones basadas en evidencia.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
+              <h3>Importancia de BI</h3>
+              <p>
+                Ayuda a identificar tendencias, detectar problemas, medir resultados y priorizar
+                acciones con mayor precisión. Todo esto mejora la operatividad y la estrategia.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-signpost-split"></i></div>
+              <h3>Toma de decisiones</h3>
+              <ul class="steps-list">
+                <li><span class="step-number">1</span><span>Identificación del problema.</span></li>
+                <li><span class="step-number">2</span><span>Recopilación de datos relevantes.</span></li>
+                <li><span class="step-number">3</span><span>Análisis de la información disponible.</span></li>
+                <li><span class="step-number">4</span><span>Evaluación de alternativas.</span></li>
+                <li><span class="step-number">5</span><span>Selección de la decisión más conveniente.</span></li>
+                <li><span class="step-number">6</span><span>Seguimiento de resultados y ajuste.</span></li>
+              </ul>
+            </article>
+
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-shop"></i></div>
+              <h3>Ejemplo práctico</h3>
+              <p>
+                Una tienda observa ventas estables en algunos productos y baja demanda en otros.
+                Con BI analiza las ventas por categoría, identifica los artículos más vendidos y
+                decide reponer inventario de los productos con mayor rotación para evitar faltantes.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-tools"></i></div>
+              <h3>Herramientas de BI</h3>
+              <p>
+                Power BI, Tableau, Excel y Looker Studio permiten transformar datos en dashboards,
+                reportes y visualizaciones útiles para distintas áreas de la empresa.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon-box"><i class="bi bi-stack"></i></div>
+              <h3>Componentes de una solución BI</h3>
+              <p>
+                Incluye fuentes de datos, procesos de integración, almacenamiento, análisis y
+                dashboards que permiten monitorear el desempeño y tomar decisiones con más confianza.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="etl">
+        <div class="container">
+          <div style="max-width: 700px;">
+            <h2 class="section-title">Proceso ETL</h2>
+            <p class="section-subtitle">
+              El proceso ETL prepara los datos para su análisis: los extrae, los limpia y los
+              almacena para que puedan apoyar decisiones y reportes.
+            </p>
+          </div>
+
+          <div class="etl-flow">
+            <article class="etl-card extract">
+              <div class="icon-box"><i class="bi bi-download"></i></div>
+              <h3>Extract</h3>
+              <p>Recopilar datos desde CSV, bases, hojas o APIs.</p>
+            </article>
+
+            <div class="etl-arrow" aria-hidden="true">→</div>
+
+            <article class="etl-card transform">
+              <div class="icon-box"><i class="bi bi-gear"></i></div>
+              <h3>Transform</h3>
+              <p>Limpiar errores, duplicados y formatos inconsistentes.</p>
+            </article>
+
+            <div class="etl-arrow" aria-hidden="true">→</div>
+
+            <article class="etl-card load">
+              <div class="icon-box"><i class="bi bi-cloud-arrow-up"></i></div>
+              <h3>Load</h3>
+              <p>Cargar datos limpios en un almacén o base para análisis.</p>
+            </article>
+          </div>
+
+          <div class="toggle-example">
+            <button id="toggle-etl-example" class="btn btn-success" type="button">Ver ejemplo ETL</button>
+          </div>
+
+          <div class="etl-example" aria-live="polite">
+            <h3>Ejemplo de tienda</h3>
+            <p><strong>Extract:</strong> recopilar registros de ventas de diferentes sucursales.</p>
+            <p>
+              <strong>Transform:</strong> corregir fechas inválidas, ajustar precios y eliminar compras
+              duplicadas antes del análisis.
+            </p>
+            <p>
+              <strong>Load:</strong> guardar los datos limpios para construir un reporte mensual de ventas,
+              margen y productos más vendidos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <div class="case-grid">
+            <article class="case-card">
+              <h3>Caso práctico: reducción de ventas</h3>
+              <p>
+                Una empresa observa que sus ventas en línea disminuyeron durante dos meses. La
+                dirección necesita entender si se debe a cambios en la demanda, la promoción o la
+                disponibilidad del inventario.
+              </p>
+              <div class="case-legend">
+                <div class="legend-item">
+                  <span class="legend-swatch" style="background: #3b82f6;"></span>
+                  <span>Datos analizados</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-swatch" style="background: #22c55e;"></span>
+                  <span>Hallazgo</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-swatch" style="background: #f59e0b;"></span>
+                  <span>Decisión</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-swatch" style="background: #ef4444;"></span>
+                  <span>Resultado esperado</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <h3>Resultado esperado</h3>
+              <p>
+                <strong>Datos:</strong> ventas, stock, tráfico digital y campañas publicitarias.
+              </p>
+              <p>
+                <strong>Hallazgo:</strong> tres productos principales disminuyeron su rotación por falta de
+                inventario y un cambio de estrategia de promoción.
+              </p>
+              <p>
+                <strong>Decisión:</strong> aumentar la reposición de esos productos y ajustar la estrategia
+                promocional con base en el volumen de ventas.
+              </p>
+              <p>
+                <strong>Resultado:</strong> recuperar participación y mejorar la rentabilidad del mes
+                siguiente.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="quiz">
+        <div class="container">
+          <div class="quiz-card">
+            <div class="quiz-header">
+              <div>
+                <h2 class="section-title" style="margin: 0;">Cuestionario BI</h2>
+              </div>
+              <span class="question-counter" id="question-counter">Pregunta 1/10</span>
+            </div>
+
+            <div class="progress-shell" aria-label="Progreso del cuestionario">
+              <div class="progress-bar" id="quiz-progress"></div>
+            </div>
+
+            <div class="question-box" id="question-box">
+              <div class="question-text" id="quiz-question">Cargando pregunta...</div>
+              <div class="answer-list" id="quiz-answers"></div>
+              <div class="feedback" id="quiz-feedback" aria-live="polite"></div>
+            </div>
+
+            <div class="quiz-actions">
+              <button class="btn btn-outline" id="finish-quiz" type="button" style="display: none;">Finalizar</button>
+              <button class="btn btn-primary" id="next-question" type="button" disabled>Siguiente</button>
+            </div>
+
+            <div class="quiz-result" id="quiz-result">
+              <div class="score-ring" aria-label="Resultado del cuestionario">
+                <div class="score-ring-inner" id="result-score">0%</div>
+              </div>
+              <div id="result-message"></div>
+              <p id="result-details"></p>
+              <button class="btn btn-success" id="retry-quiz" type="button">Intentar otra vez</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

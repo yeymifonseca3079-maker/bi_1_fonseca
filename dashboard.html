@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard LigaPro 2026</title>
+    <meta
+      name="description"
+      content="Dashboard interactivo de LigaPro 2026 con métricas, gráficos y tabla de posiciones."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="container dashboard-topbar">
+        <div>
+          <p class="dashboard-subtitle">Dashboard interactivo de rendimiento deportivo</p>
+          <h1 class="dashboard-title">LigaPro 2026 — Centro de Análisis</h1>
+        </div>
+
+        <div class="dashboard-actions">
+          <a href="index.html" class="btn btn-outline" style="background: rgba(255,255,255,0.06); color: #fff; border-color: rgba(255,255,255,0.15);">Volver a BI Academy</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="dashboard-toolbar">
+          <div class="dashboard-field">
+            <label for="team-filter">Equipo</label>
+            <select id="team-filter" aria-label="Filtrar por equipo"></select>
+          </div>
+
+          <div class="dashboard-field">
+            <label for="round-filter">Jornada</label>
+            <select id="round-filter" aria-label="Filtrar por jornada"></select>
+          </div>
+
+          <div class="dashboard-field">
+            <button id="reset-filters" class="btn btn-success" type="button">Restablecer filtros</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <div class="container">
+        <section class="kpi-grid" id="kpi-grid" aria-label="Tarjetas de métricas"></section>
+
+        <div class="dashboard-body">
+          <div class="dashboard-grid">
+            <section class="chart-card">
+              <h3>Puntos por equipo</h3>
+              <div class="chart-wrap">
+                <canvas id="chart-points"></canvas>
+              </div>
+            </section>
+
+            <aside class="summary-card" id="team-summary" aria-live="polite"></aside>
+          </div>
+
+          <div class="chart-grid" style="margin-top: 1.2rem;">
+            <section class="chart-card">
+              <h3>Distribución de resultados</h3>
+              <div class="chart-wrap">
+                <canvas id="chart-results"></canvas>
+              </div>
+            </section>
+
+            <section class="chart-card">
+              <h3>Evolución de puntos</h3>
+              <div class="chart-wrap">
+                <canvas id="chart-evolution"></canvas>
+              </div>
+            </section>
+          </div>
+
+          <div class="chart-grid" style="margin-top: 1.2rem;">
+            <section class="chart-card">
+              <h3>Goles a favor y en contra</h3>
+              <div class="chart-wrap">
+                <canvas id="chart-goals"></canvas>
+              </div>
+            </section>
+
+            <section class="chart-card">
+              <h3>Victorias en casa vs visitante</h3>
+              <div class="chart-wrap">
+                <canvas id="chart-homeaway"></canvas>
+              </div>
+            </section>
+          </div>
+
+          <section class="table-card" aria-label="Tabla de posiciones">
+            <h3>Tabla de clasificación</h3>
+            <div class="table-wrap">
+              <table class="classification-table">
+                <thead>
+                  <tr>
+                    <th>Pos.</th>
+                    <th>Equipo</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                    <th>GF</th>
+                    <th>GC</th>
+                    <th>DG</th>
+                    <th>Pts</th>
+                  </tr>
+                </thead>
+                <tbody id="standings-body"></tbody>
+              </table>
+            </div>
+            <div id="standings-empty" class="table-empty">No existen datos para este filtro.</div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
