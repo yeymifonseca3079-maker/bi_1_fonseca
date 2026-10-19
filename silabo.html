@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataVision BI | Sílabo académico</title>
+    <meta
+      name="description"
+      content="Sílabo académico de Sistemas de Información para la Inteligencia de Negocios."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/silabo.css" />
+  </head>
+  <body class="silabo-page">
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand" aria-label="BI Academy inicio">
+          <span class="brand-mark">BI</span>
+          DataVision BI
+        </a>
+
+        <button class="navbar-toggle" aria-label="Abrir menú" type="button">☰</button>
+
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro">🌙 Oscuro</button>
+          <nav aria-label="Navegación principal">
+            <ul class="navbar-nav">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#fundamentos">Fundamentos de BI</a></li>
+              <li><a href="dashboard.html">Dashboard deportivo</a></li>
+              <li><a href="silabo.html" class="active">Sílabo académico</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <header class="silabo-header">
+      <div class="container">
+        <div class="silabo-topbar">
+          <div>
+            <p class="silabo-subtitle">DataVision BI | Sílabo académico</p>
+            <h1>Sistemas de Información para la Inteligencia de Negocios</h1>
+          </div>
+          <button id="back-to-top" class="btn btn-primary" type="button">Volver al inicio</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="silabo-shell">
+      <div class="container silabo-main">
+        <aside class="side-panel">
+          <div class="side-panel-inner">
+            <h3>Índice</h3>
+            <nav class="side-nav" aria-label="Navegación del sílabo">
+              <a href="#resumen" class="active">Resumen académico</a>
+              <a href="#descripcion">Descripción</a>
+              <a href="#aporte">Aporte al perfil</a>
+              <a href="#objetivo">Objetivo general</a>
+              <a href="#unidades">Unidades</a>
+              <a href="#habilidades">Habilidades blandas</a>
+              <a href="#evaluacion">Evaluación</a>
+              <a href="#proyecto">Proyecto PlasTrack</a>
+              <a href="#bibliografia">Bibliografía</a>
+              <a href="#docente">Perfil docente</a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="content-panel">
+          <section id="resumen" class="section-card" data-search="Sistemas de Información para la Inteligencia de Negocios asignatura carrera universidad sede ciclo paralelo periodo académico créditos horas docente">
+            <div class="search-row">
+              <div class="search-box" style="flex: 1 1 100%;">
+                <i class="bi bi-search"></i>
+                <input id="silabo-search" type="search" placeholder="Buscar ETL, Data Warehouse, KPI, dashboards, evaluación..." aria-label="Buscar contenido del sílabo" />
+              </div>
+            </div>
+
+            <h2>Resumen académico</h2>
+            <div class="summary-grid">
+              <article class="summary-card" data-search="Asignatura Sistemas de Información para la Inteligencia de Negocios">
+                <div class="label"><span class="icon"><i class="bi bi-book-half"></i></span> Asignatura</div>
+                <strong>Sistemas de Información para la Inteligencia de Negocios</strong>
+              </article>
+              <article class="summary-card" data-search="Carrera Sistemas de Información">
+                <div class="label"><span class="icon"><i class="bi bi-mortarboard"></i></span> Carrera</div>
+                <strong>Sistemas de Información</strong>
+              </article>
+              <article class="summary-card" data-search="Universidad Técnica de Cotopaxi">
+                <div class="label"><span class="icon"><i class="bi bi-building"></i></span> Universidad</div>
+                <strong>Universidad Técnica de Cotopaxi</strong>
+              </article>
+              <article class="summary-card" data-search="Sede Latacunga">
+                <div class="label"><span class="icon"><i class="bi bi-geo-alt"></i></span> Sede</div>
+                <strong>Latacunga</strong>
+              </article>
+              <article class="summary-card" data-search="Ciclo Octavo">
+                <div class="label"><span class="icon"><i class="bi bi-calendar3"></i></span> Ciclo</div>
+                <strong>Octavo</strong>
+              </article>
+              <article class="summary-card" data-search="Paralelo A">
+                <div class="label"><span class="icon"><i class="bi bi-people"></i></span> Paralelo</div>
+                <strong>A</strong>
+              </article>
+              <article class="summary-card" data-search="Período académico del 12 de octubre de 2026 al 21 de febrero de 2027">
+                <div class="label"><span class="icon"><i class="bi bi-clock-history"></i></span> Período</div>
+                <strong>12 oct 2026 - 21 feb 2027</strong>
+              </article>
+              <article class="summary-card" data-search="Créditos 3">
+                <div class="label"><span class="icon"><i class="bi bi-1-circle"></i></span> Créditos</div>
+                <strong>3</strong>
+              </article>
+              <article class="summary-card" data-search="Horas totales 144">
+                <div class="label"><span class="icon"><i class="bi bi-stopwatch"></i></span> Horas totales</div>
+                <strong>144</strong>
+              </article>
+              <article class="summary-card" data-search="Horas de docencia 48">
+                <div class="label"><span class="icon"><i class="bi bi-person-video3"></i></span> Docencia</div>
+                <strong>48</strong>
+              </article>
+              <article class="summary-card" data-search="Horas de prácticas 48">
+                <div class="label"><span class="icon"><i class="bi bi-laptop"></i></span> Prácticas</div>
+                <strong>48</strong>
+              </article>
+              <article class="summary-card" data-search="Horas autónomas 48">
+                <div class="label"><span class="icon"><i class="bi bi-house-door"></i></span> Autónomas</div>
+                <strong>48</strong>
+              </article>
+              <article class="summary-card" data-search="Docente Luis Rene Quisaguano Collaguazo">
+                <div class="label"><span class="icon"><i class="bi bi-person-circle"></i></span> Docente</div>
+                <strong>Luis Rene Quisaguano Collaguazo</strong>
+              </article>
+            </div>
+          </section>
+
+          <section id="descripcion" class="section-card" data-search="descripción de la asignatura fundamentos características modelamiento BI toma de decisiones empresariales procesamiento visualización de datos">
+            <h2>Descripción de la asignatura</h2>
+            <p>
+              La asignatura se centra en los fundamentos, características y modelamiento de la inteligencia de negocios para apoyar la toma de decisiones empresariales mediante el procesamiento y la visualización de datos.
+            </p>
+            <p>
+              Su propósito consiste en analizar cómo las organizaciones pueden transformar información estructurada y no estructurada en conocimiento útil para mejorar la planificación, la operación y la estrategia. La asignatura combina conceptos de sistemas de información, análisis de datos y diseño de soluciones analíticas para apoyar procesos de decisión.
+            </p>
+            <div class="content-columns">
+              <div class="highlight-box">
+                <h3>Enfoque principal</h3>
+                <p>Estudiar la relación entre datos, decisiones y valor empresarial para generar información útil y accionable.</p>
+              </div>
+              <div class="highlight-box">
+                <h3>Procesamiento de información</h3>
+                <p>Reconocer la importancia de extraer, depurar, combinar y distribuir información para convertirla en apoyo para la gestión organizacional.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="aporte" class="section-card" data-search="aporte al perfil de egreso extracción combinación depuración distribución de información decisiones inteligentes">
+            <h2>Aporte al perfil de egreso</h2>
+            <div class="content-columns">
+              <div class="highlight-box">
+                <h3>Proceso de apoyo a la decisión</h3>
+                <p>La asignatura aporta al perfil del egresado la capacidad de trabajar con información orientada a la mejora de decisiones empresariales mediante procesos de extracción, combinación, depuración y distribución de datos.</p>
+              </div>
+              <div class="objective-box">
+                <h3>Etapas principales</h3>
+                <ul>
+                  <li>Extracción de fuentes de información.</li>
+                  <li>Combinación y depuración de datos.</li>
+                  <li>Distribución de información útil.</li>
+                  <li>Soporte a decisiones inteligentes en contextos organizacionales.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="objetivo" class="section-card" data-search="objetivo general fundamentos características modelamiento etapas implementación business intelligence">
+            <h2>Objetivo general</h2>
+            <div class="objective-box">
+              <p>
+                Comprender los fundamentos, características, modelamiento y etapas de implementación de la inteligencia de negocios como estrategia para optimizar la toma de decisiones empresariales con base en la gestión, análisis y visualización de información.
+              </p>
+            </div>
+          </section>
+
+          <section id="unidades" class="section-card" data-search="unidades de aprendizaje problemas profesionales resultados de aprendizaje temas methodology cooperative learning problem-based learning">
+            <h2>Unidades de aprendizaje</h2>
+            <div class="unit-list" data-search="Unidad 1 Fundamentos y gestión de la inteligencia de negocios">
+              <article class="unit-panel is-open">
+                <button class="unit-toggle" type="button">
+                  <span class="unit-number">1</span>
+                  <span class="unit-header-copy">
+                    <h3>Fundamentos y gestión de la inteligencia de negocios</h3>
+                    <p>Problema profesional: gestión de la inteligencia de negocios.</p>
+                  </span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="unit-content">
+                  <div class="knowledge-block">
+                    <h4>Problema profesional</h4>
+                    <p>La gestión de la inteligencia de negocios requiere conocer los fundamentos, herramientas y componentes de BI.</p>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Resultado de aprendizaje</h4>
+                    <p>Identificar los conceptos básicos, herramientas y componentes de la inteligencia de negocios en base a la aplicación de herramientas de BI.</p>
+                  </div>
+                  <div class="topic-grid">
+                    <div class="topic-chip">Conceptos básicos</div>
+                    <div class="topic-chip">Componentes de la Inteligencia de Negocios</div>
+                    <div class="topic-chip">Los sistemas de información y la generación de valor</div>
+                    <div class="topic-chip">Ventaja corporativa</div>
+                    <div class="topic-chip">Principales herramientas de BI</div>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Metodología y estrategias</h4>
+                    <p>Aprendizaje cooperativo, trabajo grupal, discusión de conceptos y aplicación práctica de herramientas de BI.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="unit-panel is-open">
+                <button class="unit-toggle" type="button">
+                  <span class="unit-number">2</span>
+                  <span class="unit-header-copy">
+                    <h3>Sistemas de soporte a la administración y Data Warehouse</h3>
+                    <p>Problema profesional: análisis de bases de datos multidimensionales.</p>
+                  </span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="unit-content">
+                  <div class="knowledge-block">
+                    <h4>Problema profesional</h4>
+                    <p>Dificultad para analizar el uso de bases de datos multidimensionales para la toma de decisiones.</p>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Resultado de aprendizaje</h4>
+                    <p>Explotar los esquemas de bases de datos multidimensionales utilizando herramientas de visualización, análisis y consultas, cumpliendo con una adecuada administración.</p>
+                  </div>
+                  <div class="topic-grid">
+                    <div class="topic-chip">Variables de medición y análisis</div>
+                    <div class="topic-chip">Data Warehouse</div>
+                    <div class="topic-chip">Sistemas de gestión del conocimiento</div>
+                    <div class="topic-chip">Patrones: evaluación, interpretación y visualización</div>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Metodología y evaluación</h4>
+                    <p>Aprendizaje basado en problemas, análisis crítico de esquemas multidimensionales, trabajo con herramientas de visualización y consultas.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="unit-panel is-open">
+                <button class="unit-toggle" type="button">
+                  <span class="unit-number">3</span>
+                  <span class="unit-header-copy">
+                    <h3>Sistema de soporte para toma de decisiones empresariales</h3>
+                    <p>Problema profesional: organización de grandes cantidades de datos.</p>
+                  </span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="unit-content">
+                  <div class="knowledge-block">
+                    <h4>Problema profesional</h4>
+                    <p>La evaluación de los objetivos de negocio conlleva la implementación de procesos para la organización de grandes cantidades de datos.</p>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Resultado de aprendizaje</h4>
+                    <p>Construir una solución de inteligencia de negocios para un caso práctico moldeando la información organizacional.</p>
+                  </div>
+                  <div class="topic-grid">
+                    <div class="topic-chip">Vistas multidimensionales (hipercubos de datos)</div>
+                    <div class="topic-chip">Procesos ETL</div>
+                    <div class="topic-chip">Reporteadores</div>
+                    <div class="topic-chip">Alertas, tableros de control y KPI</div>
+                    <div class="topic-chip">Aspectos técnicos del proyecto</div>
+                  </div>
+                  <div class="knowledge-block">
+                    <h4>Metodología y actividades</h4>
+                    <p>Aprendizaje basado en proyectos, análisis de casos prácticos, construcción de soluciones de BI y entrega de reportes visuales para apoyar la toma de decisiones.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div style="margin-top:1rem;">
+              <button id="toggle-all-units" class="expand-toggle" type="button">Contraer todas</button>
+            </div>
+          </section>
+
+          <section id="habilidades" class="section-card" data-search="habilidades blandas competencia digital creatividad ética liderazgo pensamiento crítico resolución de problemas">
+            <h2>Habilidades blandas</h2>
+            <div class="skill-grid">
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">D</span><span>Competencia digital</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>Capacidad para usar herramientas digitales y plataformas de análisis para procesar información y generar soluciones basadas en datos.</p>
+                  <p>La asignatura ayuda a desarrollar esta habilidad mediante el manejo de procesos BI y visualización de información.</p>
+                </div>
+              </article>
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">C</span><span>Creatividad</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>La creatividad permite plantear soluciones innovadoras para representar la información y comunicar hallazgos.</p>
+                  <p>La asignatura impulsa esta habilidad al diseñar dashboards y presentar resultados de análisis.</p>
+                </div>
+              </article>
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">E</span><span>Ética</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>La ética orienta el uso responsable y transparente de la información en los procesos de análisis y toma de decisiones.</p>
+                  <p>La asignatura contribuye a reforzar la responsabilidad en la gestión de datos y su interpretación.</p>
+                </div>
+              </article>
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">L</span><span>Liderazgo</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>El liderazgo permite orientar equipos y proyectos hacia objetivos claros basados en evidencia y análisis.</p>
+                  <p>La asignatura contribuye al desarrollo del liderazgo al trabajar en soluciones de BI para casos reales.</p>
+                </div>
+              </article>
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">P</span><span>Pensamiento crítico</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>El pensamiento crítico permite evaluar la calidad de la información, detectar patrones y contrastar alternativas de decisión.</p>
+                  <p>La asignatura ayuda a fortalecer esta habilidad mediante el análisis profundo de datos y métricas.</p>
+                </div>
+              </article>
+              <article class="skill-card is-open">
+                <button class="skill-toggle" type="button">
+                  <span class="skill-title"><span class="skill-badge">R</span><span>Resolución de problemas</span></span>
+                  <span class="toggle-label">Ocultar</span>
+                </button>
+                <div class="skill-content">
+                  <p>La resolución de problemas es esencial para interpretar escenarios complejos y diseñar soluciones útiles para la organización.</p>
+                  <p>La asignatura apoya esta habilidad a través de casos prácticos, proyectos y análisis orientados a decisiones empresariales.</p>
+                </div>
+              </article>
+            </div>
+            <div style="margin-top:1rem;">
+              <button id="toggle-all-skills" class="expand-toggle" type="button">Contraer todas</button>
+            </div>
+          </section>
+
+          <section id="evaluacion" class="section-card" data-search="planeación de evaluación EVAL1 EVAL2 EVAL3 22 de noviembre 2026 10 de enero 2027 14 de febrero 2027 timeline cuenta regresiva">
+            <h2>Planificación de la evaluación</h2>
+            <div class="timeline-grid" id="evaluation-timeline"></div>
+            <p id="countdown-next" class="countdown"></p>
+          </section>
+
+          <section id="proyecto" class="section-card" data-search="PlasTrack Monitoreo Inteligente de Microplásticos mediante Datos Copernicus para la Conservación de Ecosistemas Insulares transformacion de datos satelitales dashboards KPI alertas tempranas reportes visuales">
+            <h2>Proyecto articulador: PlasTrack</h2>
+            <div class="project-card">
+              <div>
+                <p><strong>Monitoreo Inteligente de Microplásticos mediante Datos Copernicus para la Conservación de Ecosistemas Insulares: PlasTrack</strong></p>
+                <p>El proyecto articula la asignatura con la investigación formativa mediante la transformación de datos satelitales en información estratégica para la toma de decisiones ambientales.</p>
+                <p>Se promueve el uso de datos de Copernicus y CMEMS para la construcción de dashboards, indicadores KPI, alertas tempranas y reportes visuales orientados a la gestión y conservación de ecosistemas.</p>
+              </div>
+              <div class="project-visual">
+                <div class="project-badge">PlasTrack</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="bibliografia" class="section-card" data-search="bibliografía básica complementaria sitios web recomendados URL consultar recurso">
+            <h2>Bibliografía y recursos académicos</h2>
+            <div class="reference-grid">
+              <article class="reference-card" data-search="Bibliografía básica">
+                <span class="category">Bibliografía básica</span>
+                <h3>Business Intelligence: An Introduction</h3>
+                <p>Recursos de referencia general sobre BI, administración y toma de decisiones.</p>
+                <a href="https://www.example.com/bi-intro" target="_blank" rel="noopener noreferrer">Consultar recurso <i class="bi bi-box-arrow-up-right"></i></a>
+              </article>
+              <article class="reference-card" data-search="Bibliografía complementaria">
+                <span class="category">Bibliografía complementaria</span>
+                <h3>Data Warehouse and Decision Support Systems</h3>
+                <p>Material de apoyo para bases multidimensionales y sistemas de soporte a decisiones.</p>
+                <a href="https://www.example.com/data-warehouse" target="_blank" rel="noopener noreferrer">Consultar recurso <i class="bi bi-box-arrow-up-right"></i></a>
+              </article>
+              <article class="reference-card" data-search="Sitios web recomendados">
+                <span class="category">Sitios web recomendados</span>
+                <h3>Copernicus Data Space</h3>
+                <p>Portal para consultar datos satelitales y observación de la Tierra.</p>
+                <a href="https://dataspace.copernicus.eu/" target="_blank" rel="noopener noreferrer">Consultar recurso <i class="bi bi-box-arrow-up-right"></i></a>
+              </article>
+            </div>
+          </section>
+
+          <section id="docente" class="section-card" data-search="perfil docente formación académica experiencia laboral Luis Rene Quisaguano Collaguazo">
+            <h2>Perfil docente</h2>
+            <div class="profile-grid">
+              <article class="profile-card">
+                <h3>Formación académica</h3>
+                <ul>
+                  <li>Magíster en Sistemas de Información, Universidad Técnica de Cotopaxi.</li>
+                  <li>Ingeniero en Informática y Sistemas, Universidad Técnica de Cotopaxi.</li>
+                </ul>
+              </article>
+              <article class="profile-card">
+                <h3>Experiencia laboral</h3>
+                <ul>
+                  <li>Universidad Técnica de Cotopaxi: profesor a tiempo parcial.</li>
+                  <li>GAD Municipal del Cantón Mejía: analista de tecnologías de la información y comunicación.</li>
+                  <li>Evolution Soft: desarrollador de software.</li>
+                  <li>Universidad Técnica de Cotopaxi: docente a tiempo completo.</li>
+                  <li>Rebian Software: gerente.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></script>
+    <script src="js/main.js"></script>
+    <script src="js/silabo.js"></script>
+  </body>
+</html>
