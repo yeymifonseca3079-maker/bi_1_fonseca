@@ -442,6 +442,11 @@ function setupDashboard() {
     printButton.addEventListener('click', () => window.print());
   }
 
+  const pdfButton = document.querySelector('#export-pdf');
+  if (pdfButton) {
+    pdfButton.addEventListener('click', () => window.print());
+  }
+
   const excelButton = document.querySelector('#export-excel');
   if (excelButton) {
     excelButton.addEventListener('click', exportExcel);

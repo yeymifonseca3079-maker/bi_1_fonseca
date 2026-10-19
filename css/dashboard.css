@@ -324,6 +324,35 @@ body.theme-dark .dashboard-field select {
   display: block;
 }
 
+@media print {
+  .dashboard-header,
+  .dashboard-shell {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .dashboard-toolbar,
+  .dashboard-actions,
+  .theme-toggle,
+  .action-btn,
+  .btn,
+  .dashboard-field button {
+    display: none !important;
+  }
+
+  .chart-wrap {
+    height: 220px !important;
+  }
+
+  .summary-card,
+  .chart-card,
+  .table-card,
+  .kpi-card {
+    box-shadow: none !important;
+    border: 1px solid rgba(15, 23, 42, 0.15) !important;
+  }
+}
+
 @media (max-width: 1100px) {
   .kpi-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
