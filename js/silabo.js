@@ -146,6 +146,42 @@ function renderEvaluationTimeline() {
   }).join('');
 }
 
+const missionChallenges = [
+  'Descubre cómo un KPI transforma un dato crudo en una decisión brillante.',
+  'Convierte un conjunto de métricas en una narrativa útil para la empresa.',
+  'Usa ETL como el motor que limpia, ordena y prepara información para analizar.',
+  'Un dashboard bien diseñado puede cambiar la forma en que se ve el negocio.',
+  'Conecta datos, análisis y estrategia para crear impacto real en la organización.'
+];
+
+function bindMissionChallenge() {
+  const button = document.querySelector('#refresh-mission');
+  const text = document.querySelector('#challenge-text');
+  const missionStatus = document.querySelector('#mission-status');
+  const xpValue = document.querySelector('#xp-value');
+
+  if (!button || !text || !missionStatus || !xpValue) return;
+
+  let currentIndex = 0;
+  let xp = Number(xpValue.textContent) || 240;
+
+  const applyChallenge = (index) => {
+    const nextText = missionChallenges[index];
+    text.textContent = nextText;
+    missionStatus.textContent = `Tu misión actual: ${nextText.toLowerCase()}`;
+
+    xp += 20;
+    xpValue.textContent = String(xp);
+  };
+
+  button.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % missionChallenges.length;
+    applyChallenge(currentIndex);
+  });
+
+  applyChallenge(currentIndex);
+}
+
 function bindSearch() {
   const input = document.querySelector('#silabo-search');
   if (!input) return;
@@ -170,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupAccordion('.unit-panel', '.unit-toggle', '#toggle-all-units');
   setupAccordion('.skill-card', '.skill-toggle', '#toggle-all-skills');
   setActiveLinkFromScroll();
+  bindMissionChallenge();
   bindSearch();
   bindTopButtons();
   renderEvaluationTimeline();

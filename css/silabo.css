@@ -153,6 +153,132 @@ body.theme-dark.silabo-page {
   margin-bottom: 1rem;
 }
 
+.mission-banner {
+  display: grid;
+  grid-template-columns: 1.4fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.08), rgba(34, 197, 94, 0.12));
+  border: 1px solid rgba(29, 78, 216, 0.14);
+  border-radius: 22px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--silabo-shadow);
+}
+
+.mission-kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(29, 78, 216, 0.1);
+  color: var(--silabo-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mission-copy h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+}
+
+.mission-copy p {
+  margin: 0.4rem 0 0;
+  color: var(--silabo-muted);
+}
+
+.mission-stats {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  min-width: 94px;
+  padding: 0.7rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--silabo-line);
+  text-align: center;
+}
+
+.stat-pill span {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--silabo-muted);
+}
+
+.stat-pill strong {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1.05rem;
+  color: var(--silabo-primary);
+}
+
+.mission-btn {
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--silabo-blue), #2563eb);
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.32);
+}
+
+.challenge-panel {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-visual {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.22), rgba(29, 78, 216, 0.12));
+  font-size: 2rem;
+  animation: floatBadge 2.5s ease-in-out infinite;
+}
+
+.challenge-copy {
+  min-width: 0;
+}
+
+.challenge-label {
+  margin: 0 0 0.25rem;
+  color: var(--silabo-blue);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.challenge-copy h4 {
+  margin: 0;
+  line-height: 1.4;
+  color: var(--silabo-primary);
+}
+
 .search-box {
   position: relative;
   flex: 1 1 300px;
@@ -516,6 +642,50 @@ body.theme-dark.silabo-page {
 
 .hidden-search-item {
   display: none !important;
+}
+
+@keyframes floatBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .mission-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid,
+  .reference-grid,
+  .profile-grid,
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .summary-grid,
+  .reference-grid,
+  .profile-grid,
+  .skill-grid,
+  .timeline-grid,
+  .content-columns,
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-banner,
+  .challenge-panel {
+    padding: 1rem;
+  }
+
+  .mission-stats {
+    justify-content: flex-start;
+  }
 }
 
 mark {
