@@ -338,6 +338,39 @@ function buildChartConfigs(standings, selectedTeam, roundValue) {
 }
 
 const dashboards = {};
+let currentStandings = [];
+
+function exportExcel() {
+  if (!currentStandings.length) return;
+
+  const rows = [
+    ['Posición', 'Equipo', 'Partidos jugados', 'Partidos ganados', 'Empates', 'Derrotas', 'Goles a favor', 'Goles en contra', 'Diferencia de goles', 'Puntos']
+  ];
+
+  currentStandings.forEach((team, index) => {
+    rows.push([
+      index + 1,
+      team.team,
+      team.played,
+      team.wins,
+      team.draws,
+      team.losses,
+      team.goalsFor,
+      team.goalsAgainst,
+      team.goalDifference,
+      team.points
+    ]);
+  });
+
+  const csvContent = rows.map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',')).join('\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'liga-pro-2026-dashboard.csv';
+  link.click();
+  URL.revokeObjectURL(url);
+}
 
 function renderCharts(standings, selectedTeam, roundValue) {
   const config = buildChartConfigs(standings, selectedTeam, roundValue);
@@ -371,6 +404,7 @@ function setupDashboard() {
     const teamValue = selectedTeam ? selectedTeam.value : 'all';
     const roundValue = selectedRound ? selectedRound.value : 'all';
     const standings = buildStandings(roundValue, teamValue);
+    currentStandings = standings;
     renderKPIs(standings, roundValue, teamValue);
     renderSummary(standings, teamValue, roundValue);
     renderTable(standings);
@@ -401,6 +435,16 @@ function setupDashboard() {
       if (selectedRound) selectedRound.value = 'all';
       refreshDashboard();
     });
+  }
+
+  const printButton = document.querySelector('#print-dashboard');
+  if (printButton) {
+    printButton.addEventListener('click', () => window.print());
+  }
+
+  const excelButton = document.querySelector('#export-excel');
+  if (excelButton) {
+    excelButton.addEventListener('click', exportExcel);
   }
 
   refreshDashboard();

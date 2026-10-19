@@ -1,5 +1,27 @@
 const navToggle = document.querySelector('.navbar-toggle');
 const navMenu = document.querySelector('.navbar-nav');
+const themeToggle = document.querySelector('#theme-toggle');
+
+function applyTheme(theme) {
+  const selectedTheme = theme === 'dark' ? 'dark' : 'light';
+  document.body.classList.toggle('theme-dark', selectedTheme === 'dark');
+  localStorage.setItem('bi-theme', selectedTheme);
+
+  if (themeToggle) {
+    themeToggle.textContent = selectedTheme === 'dark' ? '☀️ Claro' : '🌙 Oscuro';
+    themeToggle.setAttribute('aria-label', selectedTheme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  }
+}
+
+const preferredTheme = localStorage.getItem('bi-theme') || 'light';
+applyTheme(preferredTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  });
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {

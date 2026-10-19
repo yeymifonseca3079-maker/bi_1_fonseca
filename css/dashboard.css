@@ -18,6 +18,11 @@ body.dashboard-page {
   color: var(--dash-text);
 }
 
+body.theme-dark.dashboard-page {
+  background: linear-gradient(180deg, #020817 0%, #0f172a 100%);
+  color: #e2e8f0;
+}
+
 .dashboard-shell {
   padding: 3rem 0 4rem;
 }
@@ -107,6 +112,36 @@ body.dashboard-page {
   padding: 1.2rem 1rem;
   border: 1px solid var(--dash-border);
   box-shadow: var(--dash-shadow);
+}
+
+body.theme-dark .kpi-card,
+body.theme-dark .chart-card,
+body.theme-dark .summary-card,
+body.theme-dark .table-card {
+  background: #111827;
+  border-color: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
+}
+
+body.theme-dark .kpi-card .value,
+body.theme-dark .summary-card h3,
+body.theme-dark .summary-card strong,
+body.theme-dark .classification-table thead th,
+body.theme-dark .classification-table td {
+  color: #e2e8f0;
+}
+
+body.theme-dark .kpi-card .label,
+body.theme-dark .classification-table thead th,
+body.theme-dark .summary-card p,
+body.theme-dark .table-empty {
+  color: #cbd5e1;
+}
+
+body.theme-dark .dashboard-field select {
+  background: rgba(15, 23, 42, 0.65);
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.2);
 }
 
 .kpi-card .label {
